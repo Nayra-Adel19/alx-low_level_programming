@@ -130,7 +130,7 @@ int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 		return (0);
 
 	zb = key_index((const unsigned char *)key, ht->size);
-	next = ht->array[b];
+	next = ht->array[zb];
 
 	while (next != NULL)
 	{
